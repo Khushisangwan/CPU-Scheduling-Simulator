@@ -77,4 +77,4 @@
      Step 5: Optimize & Finalize  
          ->  Add error handling for invalid inputs.  
          ->  Improve UI for better usability.  
-         ->  Optimize algorithm   
+         ->  Optimize algorithm execution.      
