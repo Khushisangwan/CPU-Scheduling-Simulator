@@ -7,15 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from queue import PriorityQueue
 
 
-def calculate_scheduling():
-    algorithm = algo_var.get()
-    try:
-        processes = []
-        for row in table.get_children():
-            values = table.item(row)['values']
-            processes.append(
-                {'pid': int(values[0]), 'arrival': int(values[1]), 'burst': int(values[2]), 'priority': int(values[3])})
-    
+
 
         if algorithm == "FCFS":
             result = fcfs(processes)
