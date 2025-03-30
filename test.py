@@ -48,31 +48,7 @@ def fcfs(processes):
 
     
 
-def sjf(processes):
-    if not processes:
-        return []
-    processes = [p.copy() for p in processes]
-    processes.sort(key=lambda x: x['arrival'])
-    result = []
-    time = processes[0]['arrival']
-    pq = PriorityQueue()  
-    next_process_idx = 0
-    while next_process_idx < len(processes) or not pq.empty():
-        while next_process_idx < len(processes) and processes[next_process_idx]['arrival'] <= time:
-            p = processes[next_process_idx]
-            pq.put((p['burst'], p['arrival'], p['pid']))
-            next_process_idx += 1
 
-        if pq.empty():
-            if next_process_idx < len(processes):
-                time = processes[next_process_idx]['arrival']
-                continue
-            else:
-                break
-        burst, arrival, pid = pq.get()
-        result.append((pid, time, time + burst))
-        time += burst
-    return result
 
 
 def srtf(processes):
