@@ -317,15 +317,6 @@ def display_gantt_chart(schedule):
     canvas.draw()
 
 
-def add_process():
-    try:
-        pid = int(entry_pid.get())
-        arrival = int(entry_arrival.get())
-        burst = int(entry_burst.get())
-        priority = int(entry_priority.get())
-        table.insert("", "end", values=(pid, arrival, burst, priority))
-    except ValueError:
-        messagebox.showerror("Error", "Invalid input. Please enter valid numbers.")
 
 
 def delete_process():
