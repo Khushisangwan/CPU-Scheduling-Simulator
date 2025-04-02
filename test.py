@@ -146,6 +146,46 @@ def srtf(processes):
 
     return merged_result
 
+def round_robin(processes, quantum):
+    if not processes:
+        return []
+    processes = [p.copy() for p in processes]
+    processes.sort(key=lambda x: x['arrival'])
+    result = []
+    ready_queue = []  
+    time = processes[0]['arrival'] 
+    remaining_burst = {p['pid']: p['burst'] for p in processes}
+    remaining_processes = len(processes)
+    next_arrival_idx = 0
+
+    while remaining_processes > 0:
+        while next_arrival_idx < len(processes) and processes[next_arrival_idx]['arrival'] <= time:
+            ready_queue.append(processes[next_arrival_idx])
+            next_arrival_idx += 1
+
+        if not ready_queue:
+            if next_arrival_idx < len(processes):
+                time = processes[next_arrival_idx]['arrival']
+                continue
+            else:
+                break  
+        current_process = ready_queue.pop(0)
+        pid = current_process['pid']
+        exec_time = min(quantum, remaining_burst[pid])
+        result.append((pid, time, time + exec_time))
+        time += exec_time
+        remaining_burst[pid] -= exec_time
+        if remaining_burst[pid] == 0:
+            remaining_processes -= 1
+        else:
+            arrived_during_execution = []
+            while next_arrival_idx < len(processes) and processes[next_arrival_idx]['arrival'] <= time:
+                arrived_during_execution.append(processes[next_arrival_idx])
+                next_arrival_idx += 1
+            ready_queue.extend(arrived_during_execution)
+            ready_queue.append(current_process)
+
+    return result if result else [(0, 0, 0)]  
 
 
 def priority_scheduling(processes):
