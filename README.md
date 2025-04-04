@@ -5,7 +5,11 @@
     -> Develop a simulator for visualizing and comparing different CPU scheduling algorithms.  
     -> Help users understand the behavior of scheduling policies with real-time Gantt charts.  
     -> Compute performance metrics like Average Waiting Time (AWT), Turnaround Time (TAT), and CPU Utilization.  
-
+ Expected Outcomes:  
+     -> A working simulator supporting FCFS, SJF (Preemptive & Non-Preemptive), Round Robin, and Priority Scheduling.  
+     -> Graphical visualization of scheduling (e.g., Gantt Chart).  
+     -> Performance evaluation with key metrics.  
+     User-friendly interface for input and real-time execution.  
  Scope:  
     -> Input: Process details (arrival time, burst time, priority, quantum time for RR).  
     -> Output: Gantt chart, per-process details, and performance metrics.  
