@@ -60,4 +60,21 @@
      Component =	  Recommendation    
      Language	=   Python (for easy GUI & visualization)GUI Library	Tkinter (Python) or PyQt Graphing	Matplotlib (for Gantt chart)    
      Development = Tools	VS Code, PyCharm  
- 
+ 5. Execution Plan    
+     Step 1: Setup Development Environment   
+         -> Install Python (if using Python) or C++ compiler (if using C++).  
+         ->  Install required libraries (Tkinter, Matplotlib for Python).  
+     Step 2: Implement Scheduling Algorithms  
+         -> Start with FCFS (simplest).  
+         ->  Implement SJF, Priority, and Round Robin.  
+         ->  Test each algorithm with sample inputs.  
+     Step 3: Build the GUI  
+         ->  Create a simple process input interface.  
+         ->  Add buttons for algorithm selection & execution.  
+     Step 4: Implement Gantt Chart & Performance Metrics  
+         -> Use Matplotlib (Python) or SFML/SDL (C++) to visualize scheduling.  
+         -> Display average waiting time, turnaround time, and CPU utilization.  
+     Step 5: Optimize & Finalize  
+         ->  Add error handling for invalid inputs.  
+         ->  Improve UI for better usability.  
+         ->  Optimize algorithm execution.      
