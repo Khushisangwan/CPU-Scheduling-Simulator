@@ -29,7 +29,15 @@
       -> Uses Tkinter/PyQt for user interaction.  
       -> Displays real-time Gantt chart using Matplotlib.  
       -> Shows tabular process statistics.  
-
+ 3. Functionalities  
+   1. Input & Process Management  
+     ✅ Features:  
+      -> Allow users to enter process details (Arrival Time, Burst Time, Priority, etc.).  
+      -> Modify/Delete process entries dynamically.  
+      -> Load predefined test cases.  
+ 2. Scheduling & Computation   
+     ✅ Features:  
+ 
    Implements:  
     -> FCFS (First Come, First Serve)   
     -> SJF (Shortest Job First - Preemptive & Non-Preemptive)    
