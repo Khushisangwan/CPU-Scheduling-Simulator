@@ -43,7 +43,18 @@
     -> SJF (Shortest Job First - Preemptive & Non-Preemptive)    
     -> Round Robin    
      -> Priority Scheduling  
-
+   Calculates:  
+    -> Completion Time (CT)  
+    -> Turnaround Time (TAT = CT - AT)  
+    -> Waiting Time (WT = TAT - BT)  
+    -> CPU Utilization & Throughput  
+    -> Generates Gantt chart sequence.
+    3. GUI & Visualization    
+    ✅ Features:    
+ 
+  -> Real-time Gantt chart visualization.    
+ -> Tables for per-process analysis.    
+ -> Graphical comparison of scheduling metrics. 
  
  #Technology Recommendations  
      Component =	  Recommendation    
