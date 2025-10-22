@@ -37,14 +37,7 @@ def calculate_scheduling():
         messagebox.showerror("Error", f"Invalid input: {e}")
 
 
-def fcfs(processes):
-    processes.sort(key=lambda x: x['arrival'])
-    start_time, result = 0, []
-    for process in processes:
-        start_time = max(start_time, process['arrival'])
-        result.append((process['pid'], start_time, start_time + process['burst']))
-        start_time += process['burst']
-    return result
+
 
     
 
