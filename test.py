@@ -7,29 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from queue import PriorityQueue
 
 
-def calculate_scheduling():
-    algorithm = algo_var.get()
-    try:
-        processes = []
-        for row in table.get_children():
-            values = table.item(row)['values']
-            processes.append(
-                {'pid': int(values[0]), 'arrival': int(values[1]), 'burst': int(values[2]), 'priority': int(values[3])})
-    
 
-           if algorithm == "FCFS":
-            result = fcfs(processes)
-        elif algorithm == "SJF":
-            result = sjf(processes)
-        elif algorithm == "SRTF": 
-            result = srtf(processes)
-        elif algorithm == "Round Robin":
-            quantum = int(time_quantum.get()) if time_quantum.get() else 2
-            result = round_robin(processes, quantum)
-        elif algorithm == "Priority":
-            result = priority_scheduling(processes)
-        else:
-            return     
 
         display_gantt_chart(result)
         calculate_and_display_metrics(result, processes)
