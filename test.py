@@ -147,7 +147,16 @@ def srtf(processes):
     return merged_result
 
 def round_robin(processes, quantum):
-    
+ if not processes:
+        return []
+    processes = [p.copy() for p in processes]
+    processes.sort(key=lambda x: x['arrival'])
+    result = []
+    ready_queue = []  
+    time = processes[0]['arrival'] 
+    remaining_burst = {p['pid']: p['burst'] for p in processes}
+    remaining_processes = len(processes)
+    next_arrival_idx = 0   
 
     while remaining_processes > 0:
         while next_arrival_idx < len(processes) and processes[next_arrival_idx]['arrival'] <= time:
