@@ -39,19 +39,7 @@
  2. Scheduling & Computation   
      ✅ Features:  
  
-   Implements:  
-    -> FCFS (First Come, First Serve)   
-    -> SJF (Shortest Job First - Preemptive & Non-Preemptive)    
-    -> Round Robin    
-     -> Priority Scheduling  
-   Calculates:  
-    -> Completion Time (CT)  
-    -> Turnaround Time (TAT = CT - AT)  
-    -> Waiting Time (WT = TAT - BT)  
-    -> CPU Utilization & Throughput  
-    -> Generates Gantt chart sequence.
-    3. GUI & Visualization    
-    ✅ Features:    
+   
  
   -> Real-time Gantt chart visualization.    
  -> Tables for per-process analysis.    
