@@ -28,8 +28,9 @@ Goals:
    3. GUI & Visualization Module  
       -> Uses Tkinter/PyQt for user interaction.  
       -> Displays real-time Gantt chart using Matplotlib.  
-      -> Shows tabular process statistics.  
-   3. Functionalities  
+      -> Shows tabular process statistics.
+       
+3. Functionalities  
    1. Input & Process Management  
      ✅ Features:  
       -> Allow users to enter process details (Arrival Time, Burst Time, Priority, etc.).  
