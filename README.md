@@ -61,6 +61,7 @@ Goals:
      Component =	  Recommendation    
      Language	=   Python (for easy GUI & visualization)GUI Library	Tkinter (Python) or PyQt Graphing	Matplotlib (for Gantt chart)    
      Development = Tools	VS Code, PyCharm  
+     
  5. Execution Plan    
      Step 1: Setup Development Environment   
          -> Install Python (if using Python) or C++ compiler (if using C++).  
