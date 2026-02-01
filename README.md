@@ -17,7 +17,18 @@ Goals:
 2. Module-Wise Breakdown  
     # Three main modules:  
  
-   
+1. Input & Process Management Module  
+      -> Handles user input of process attributes.  
+      -> Stores process details dynamically.  
+      -> Implements various scheduling algorithms.  
+   2. Scheduling & Computation Module  
+      -> Implements different CPU scheduling algorithms.  
+      -> Calculates key metrics (Waiting Time, Turnaround Time, etc.).  
+      -> Generates Gantt Chart data.  
+   3. GUI & Visualization Module  
+      -> Uses Tkinter/PyQt for user interaction.  
+      -> Displays real-time Gantt chart using Matplotlib.  
+      -> Shows tabular process statistics.   
        
 3. Functionalities  
    1. Input & Process Management  
